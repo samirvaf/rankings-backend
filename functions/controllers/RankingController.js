@@ -29,7 +29,7 @@ module.exports = {
                 response.push(currentRanking);
             })
 
-            return res.json(response);
+            return res.json({ "top_players": response });
         })
     },
 
