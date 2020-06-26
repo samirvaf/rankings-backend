@@ -6,4 +6,5 @@ const app = express();
 
 app.use(routes);
 app.use(express.json())
+
 exports.api = functions.https.onRequest(app);
