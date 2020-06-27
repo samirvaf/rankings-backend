@@ -45,7 +45,6 @@ module.exports = {
                 .required(),
             score: yup
                 .number()
-                .positive()
                 .required()
         })
 
@@ -59,7 +58,7 @@ module.exports = {
 
         await query.add({
             name: name,
-            score: score
+            score: parseInt(score)
         })
 
         return res.json({ name, score });
